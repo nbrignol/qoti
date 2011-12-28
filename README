@@ -7,7 +7,7 @@ Every iteration will bring a new simple feature, like moving hero, collecting co
 
 Here is a list of potential "user stories", from the very first steps :
  X Hero is centered on the screen.
- - Hero move to right, left, up and down while player press the right, left, up or down arrow.
+ X Hero move to right or left while player press the right or left arrow.
  - Hero is blocked by the screen edge.
  - Hero look at left or right when moving to left or right.
  - Hero fall until he's blocked by something.
