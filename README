@@ -1,1 +1,54 @@
 "The Quest of the Incrementalist"
+
+An experiment of building a classic 2D game from the ground-up, by very small increments, based on simple user-stories.
+
+The main idea is to make a playable game at each step of the development session, which will probably never end.
+Every iteration will bring a new simple feature, like moving hero, collecting coins, providing a pause menu, score count, etc.
+
+Here is a list of potential "user stories", from the very first steps :
+ - Hero is centered on the screen, facing the player.
+ - Hero move to right, left, up and down while player press the right, left, up or down arrow.
+ - Hero is blocked by the screen edge.
+ - Hero look at left or right when moving to left or right.
+ - Hero fall until he's blocked by something.
+ - Level is composed by platforms.
+ - Hero can walk on platforms. 
+ - Hero animate when moving.
+ - Level is composed by walls, too.
+ - Hero is blocked by walls.
+ - Hero can jump if player press up arrow.
+ - Level contains background decorative plants.
+ - Level contains foreground decorative plants.
+ - Level contains animated gold coins, anywhere.
+ - Hero can collect coins.
+ - Hero count collected coins.
+ - Level has music.
+ - Level contains others characters.
+ - Hero is hurt if he touch the others villains characters.
+ - Hero restart level if he loose to many HP.
+ - Hero can kill villains with his staff when player press space.
+ - Villain can patrol on a platform.
+ - Villain can move outside the platforms.
+ - Hero change level when collect enough coins.
+ - Player see the end screen when he finish all levels.
+ - Player see the start screen before starting to play.
+ - Hero can kill villains if he jump on their head.
+ - Level can be bigger than the screen.
+ - Hero can throw fireball when player press ctrl button.
+ - Level can contains scrolls.
+ - Hero can collect scrolls and throw fireballs one time by scroll collected.
+ - Villain can give a coin or a scroll when get killed.
+ - Hero can push some walls.
+ - Walls are affected by gravity.
+ - Moving platforms can transport villains and hero.
+ - Level can contains doors and remote triggers.
+ - Hero, Villains and Walls can open door when posed on the trigger.
+ - Hero can go up and down small stairs.
+ - Hero can be transported thru teleporters in same level.
+ - Hero can be transported thru teleporters in other level then come back.
+ - ...
+
+
+ 
+
+
