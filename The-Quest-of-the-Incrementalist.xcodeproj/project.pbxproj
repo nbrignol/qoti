@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		784D0E6714ABBE4400610BDF /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D0E6614ABBE4400610BDF /* hero.png */; };
 		A0072ADE0F1D0EC500B4A594 /* sfml-system.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
 		A0072ADF0F1D0EC500B4A594 /* sfml-window.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
 		A0072AE00F1D0EC500B4A594 /* sfml-graphics.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		784D0E6614ABBE4400610BDF /* hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero.png; sourceTree = "<group>"; };
 		A01FB6A90F07CF6E000AAC7B /* The-Quest-of-the-Incrementalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Quest-of-the-Incrementalist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01FB6AC0F07CF6E000AAC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01FB6C80F07CFCE000AAC7B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		A01FB6B10F07CF7C000AAC7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				784D0E6614ABBE4400610BDF /* hero.png */,
 				A01FB6AC0F07CF6E000AAC7B /* Info.plist */,
 			);
 			name = Resources;
@@ -152,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784D0E6714ABBE4400610BDF /* hero.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
