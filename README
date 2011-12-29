@@ -8,7 +8,7 @@ Every iteration will bring a new simple feature, like moving hero, collecting co
 Here is a list of potential "user stories", from the very first steps :
  X Hero is centered on the screen.
  X Hero move to right or left while player press the right or left arrow.
- - Hero is blocked by the screen edge.
+ X Hero is blocked by the screen edge.
  - Hero look at left or right when moving to left or right.
  - Hero fall until he's blocked by something.
  - Level is composed by platforms.
@@ -46,6 +46,8 @@ Here is a list of potential "user stories", from the very first steps :
  - Hero can go up and down small stairs.
  - Hero can be transported thru teleporters in same level.
  - Hero can be transported thru teleporters in other level then come back.
+ - Player can use a joystick instead of the keyboard.
+ - Player can play in full screen
  - ...
 
 

@@ -3,74 +3,43 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include <SFML/Graphics.hpp>
+#include "Hero.h"
+#include <iostream>
 
-
-////////////////////////////////////////////////////////////
-/// Entry point of application
-///
-/// \return Application exit code
-///
-////////////////////////////////////////////////////////////
 int main()
 {
    
 	// Create main window
-    sf::RenderWindow App(sf::VideoMode(800, 600), "The Quest of the Incrementalist 3");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "The Quest of the Incrementalist 3", sf::Style::Titlebar | sf::Style::Close);
 	sf::Color backgroundColor = sf::Color(50, 50, 50);
-	
-	sf::Image Image;
-	Image.SetSmooth(false); //to avoid any antialias
-
-	if (!Image.LoadFromFile("hero.png"))
-	{
-		return EXIT_FAILURE;
-	}
-	
-	sf::Sprite Sprite;
-	Sprite.SetImage(Image);
-	Sprite.SetX((App.GetWidth() - Image.GetWidth()) / 2);
-	Sprite.SetY((App.GetHeight() - Image.GetHeight()) / 2);
-	
-	float move = 200;
+		
+	Hero hero;
+	hero.center(window.GetWidth(), window.GetHeight());
 	
     // Start game loop
-    while (App.IsOpened())
+    while (true)
     {
         // Process events
         sf::Event Event;
-        while (App.GetEvent(Event))
-        {
-            // Close window : exit
-            if (Event.Type == sf::Event::Closed)
-                App.Close();
-        }
-		
-		//sf::Sleep(0.4f);
+        window.GetEvent(Event);
 		
 		// Get elapsed time for this frame
-		float ElapsedTime = App.GetFrameTime();
-		//float Framerate = 1.f / ElapsedTime;
+		float elapsedTime = window.GetFrameTime();
 		
 		// Move the sprite
-		if (App.GetInput().IsKeyDown(sf::Key::Left))  Sprite.Move(-1 * move * ElapsedTime, 0);
-		if (App.GetInput().IsKeyDown(sf::Key::Right)) Sprite.Move( move * ElapsedTime, 0);
-
-		int spriteX = Sprite.GetPosition().x;
-		int spriteWidth = Sprite.GetSize().x;
-		
-		if (spriteX < 0){
-			Sprite.SetX(0);
-		} else if (spriteX > App.GetWidth() - spriteWidth){
-			Sprite.SetX(App.GetWidth() - spriteWidth);
+		if (window.GetInput().IsKeyDown(sf::Key::Left)){
+			hero.moveLeft(elapsedTime);
 		}
 		
-        // Clear screen
-        App.Clear(backgroundColor);
-
-		App.Draw(Sprite);
-
-        // Finally, display the rendered frame on screen
-        App.Display();
+		if (window.GetInput().IsKeyDown(sf::Key::Right)){
+			hero.moveRight(elapsedTime);
+		}
+		
+		hero.stayInLimits(window.GetWidth(), window.GetHeight());
+		
+        window.Clear(backgroundColor);
+		window.Draw(hero.getSprite());
+        window.Display();
     }
 
     return EXIT_SUCCESS;

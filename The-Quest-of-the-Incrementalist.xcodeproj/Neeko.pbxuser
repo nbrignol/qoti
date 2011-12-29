@@ -44,6 +44,14 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	784D0F3314ACE8A600610BDF /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1040}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRange = "{654, 1120}";
+			sepNavWindowFrame = "{{61, 143}, {1056, 588}}";
+		};
+	};
 	A01FB69C0F07CF63000AAC7B /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 784D0E3A14ABBC5600610BDF /* The-Quest-of-the-Incrementalist */;
@@ -78,8 +86,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 346874814;
-			PBXWorkspaceStateSaveDate = 346874814;
+			PBXPerProjectTemplateStateSaveDate = 346882940;
+			PBXWorkspaceStateSaveDate = 346882940;
 		};
 		sourceControlManager = 784D0E4814ABBC5A00610BDF /* Source Control */;
 		userBuildSettings = {
