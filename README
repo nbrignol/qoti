@@ -9,7 +9,7 @@ Here is a list of potential "user stories", from the very first steps :
  X Hero is centered on the screen.
  X Hero move to right or left while player press the right or left arrow.
  X Hero is blocked by the screen edge.
- - Hero look at left or right when moving to left or right.
+ X Hero look at left or right when moving to left or right.
  - Hero fall until he's blocked by something.
  - Level is composed by platforms.
  - Hero can walk on platforms. 

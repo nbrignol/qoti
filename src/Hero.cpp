@@ -29,11 +29,12 @@ void Hero::center(int width, int height){
 };
 
 void Hero::moveLeft(float elapsedTime){
+	this->sprite.FlipX(true);
 	this->sprite.Move(-1 * Hero::speed * elapsedTime, 0);
-	
 };
 
 void Hero::moveRight(float elapsedTime){
+	this->sprite.FlipX(false);
 	this->sprite.Move(1 * Hero::speed * elapsedTime, 0);
 };
 
