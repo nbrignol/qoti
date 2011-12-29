@@ -15,7 +15,7 @@ int main()
 {
    
 	// Create main window
-    sf::RenderWindow App(sf::VideoMode(800, 600), "The Quest of the Incrementalist 2");
+    sf::RenderWindow App(sf::VideoMode(800, 600), "The Quest of the Incrementalist 3");
 	sf::Color backgroundColor = sf::Color(50, 50, 50);
 	
 	sf::Image Image;
@@ -55,6 +55,15 @@ int main()
 		if (App.GetInput().IsKeyDown(sf::Key::Left))  Sprite.Move(-1 * move * ElapsedTime, 0);
 		if (App.GetInput().IsKeyDown(sf::Key::Right)) Sprite.Move( move * ElapsedTime, 0);
 
+		int spriteX = Sprite.GetPosition().x;
+		int spriteWidth = Sprite.GetSize().x;
+		
+		if (spriteX < 0){
+			Sprite.SetX(0);
+		} else if (spriteX > App.GetWidth() - spriteWidth){
+			Sprite.SetX(App.GetWidth() - spriteWidth);
+		}
+		
         // Clear screen
         App.Clear(backgroundColor);
 
