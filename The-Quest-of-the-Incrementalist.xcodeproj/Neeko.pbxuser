@@ -24,6 +24,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = "The-Quest-of-the-Incrementalist";
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -46,6 +48,9 @@
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 784D0E3A14ABBC5600610BDF /* The-Quest-of-the-Incrementalist */;
 		activeTarget = A01FB6A80F07CF6E000AAC7B /* The-Quest-of-the-Incrementalist */;
+		addToTargets = (
+			A01FB6A80F07CF6E000AAC7B /* The-Quest-of-the-Incrementalist */,
+		);
 		codeSenseManager = 784D0E4914ABBC5A00610BDF /* Code sense */;
 		executables = (
 			784D0E3A14ABBC5600610BDF /* The-Quest-of-the-Incrementalist */,
