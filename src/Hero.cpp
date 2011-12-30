@@ -38,15 +38,25 @@ void Hero::moveRight(float elapsedTime){
 	this->sprite.Move(1 * Hero::speed * elapsedTime, 0);
 };
 
+void Hero::moveDown(float elapsedTime){
+	this->sprite.Move(0, 1 * Hero::speed * elapsedTime);
+};
+
 void Hero::stayInLimits(int width, int height){
 	
 	int spriteX = this->sprite.GetPosition().x;
+	int spriteY = this->sprite.GetPosition().y;
 	int spriteWidth = this->sprite.GetSize().x;
+	int spriteHeight = this->sprite.GetSize().y;
 	
 	if (spriteX < 0){
 		this->sprite.SetX(0);
 	} else if (spriteX > width - spriteWidth){
 		this->sprite.SetX(width - spriteWidth);
+	}
+	
+	if (spriteY >= height - spriteHeight){
+		this->sprite.SetY(height - spriteHeight);
 	}
 }
 

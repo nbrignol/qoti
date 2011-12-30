@@ -22,6 +22,7 @@ public:
 	
 	void moveLeft(float elapsedTime);
 	void moveRight(float elapsedTime);
+	void moveDown(float elapsedTime);
 	void center(int width, int height);
 	void stayInLimits(int width, int height);
 	

@@ -10,7 +10,7 @@ int main()
 {
    
 	// Create main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "The Quest of the Incrementalist 4", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(800, 600), "The Quest of the Incrementalist 5", sf::Style::Titlebar | sf::Style::Close);
 	sf::Color backgroundColor = sf::Color(50, 50, 50);
 		
 	Hero hero;
@@ -35,6 +35,7 @@ int main()
 			hero.moveRight(elapsedTime);
 		}
 		
+		hero.moveDown(elapsedTime);
 		hero.stayInLimits(window.GetWidth(), window.GetHeight());
 		
         window.Clear(backgroundColor);
