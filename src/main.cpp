@@ -38,6 +38,8 @@ int main()
 		hero.moveDown(elapsedTime);
 		hero.stayInLimits(window.GetWidth(), window.GetHeight());
 		
+		hero.animate();
+		
         window.Clear(backgroundColor);
 		window.Draw(hero.getSprite());
         window.Display();

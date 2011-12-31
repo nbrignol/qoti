@@ -8,6 +8,7 @@
  */
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 
 enum HeroStatus {
 	Idle,
@@ -20,6 +21,9 @@ class Hero {
 
 protected:
 	static const int speed; 
+	
+	std::vector<sf::Image> images;
+	int currentImage;
 	
 	sf::Sprite sprite;
 	sf::Image imageIdle;
@@ -42,6 +46,7 @@ public:
 	
 	void setCurrentStatus(HeroStatus newStatus, bool isStable);
 	void restoreLastStableStatus();
+	void animate();
 	
 	sf::Sprite& getSprite();
 };

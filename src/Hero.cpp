@@ -16,22 +16,37 @@ Hero::Hero(){
 
 	this->setCurrentStatus(Idle, true);
 	
-	sf::Image imageIdle;
-	sf::Image imageLeft;
-	sf::Image imageRight;
-	sf::Image imageFall;
-	
 	this->imageIdle.SetSmooth(false); //to avoid any antialias
-	this->imageIdle.LoadFromFile("hero_0002_face.png");
+	this->imageIdle.LoadFromFile("hero_idle1.png");
+	
+	sf::Image image1;	
+	sf::Image image2;	
+	sf::Image image3;	
+	sf::Image image4;
+	
+	image1.SetSmooth(false); //to avoid any antialias
+	image1.LoadFromFile("hero_walkright1.png");
+	image2.SetSmooth(false); //to avoid any antialias
+	image2.LoadFromFile("hero_walkright2.png");
+	image3.SetSmooth(false); //to avoid any antialias
+	image3.LoadFromFile("hero_walkright3.png");
+	image4.SetSmooth(false); //to avoid any antialias
+	image4.LoadFromFile("hero_walkright4.png");
+	
+	images.push_back(image1);
+	images.push_back(image2);
+	images.push_back(image3);
+	images.push_back(image4);
+	currentImage = 0;
 	
 	this->imageLeft.SetSmooth(false); //to avoid any antialias
-	this->imageLeft.LoadFromFile("hero_0003_lookleft.png");
+	this->imageLeft.LoadFromFile("hero_walkleft1.png");
 	
 	this->imageRight.SetSmooth(false); //to avoid any antialias
-	this->imageRight.LoadFromFile("hero_0001_lookright.png");
+	this->imageRight.LoadFromFile("hero_walkright1.png");
 	
 	this->imageFall.SetSmooth(false); //to avoid any antialias
-	this->imageFall.LoadFromFile("hero_0000_fall.png");
+	this->imageFall.LoadFromFile("hero_fall1.png");
 	
 	this->sprite.SetImage(imageIdle);
 };
@@ -96,7 +111,7 @@ sf::Sprite& Hero::getSprite(){
 			this->sprite.SetImage(imageLeft);
 			break;
 		case WalkingRight:
-			this->sprite.SetImage(imageRight);
+			this->sprite.SetImage(this->images.at(currentImage/100));
 			break;
 		case Falling:
 			this->sprite.SetImage(imageFall);
@@ -110,4 +125,9 @@ sf::Sprite& Hero::getSprite(){
 	
 	return this->sprite;
 };
+
+void Hero::animate(){
+	currentImage++;
+	if (currentImage > 390) currentImage=0;
+}
 

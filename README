@@ -12,9 +12,9 @@ Here is a list of potential "user stories", from the very first steps :
  X Hero look at left or right when moving to left or right.
  X Hero fall until he's blocked by something.
  X Hero change position when acting
+ - Hero animate when moving.
  - Level is composed by platforms.
  - Hero can walk on platforms. 
- - Hero animate when moving.
  - Level is composed by walls, too.
  - Hero is blocked by walls.
  - Hero can jump if player press up arrow.

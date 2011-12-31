@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>784D10E214AF7BBB00610BDF</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>Hero.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>784D10E314AF7BBB00610BDF</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>Hero.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>784D114914AF815A00610BDF</string>
+						<key>history</key>
+						<array>
+							<string>784D10DE14AF7AA700610BDF</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1056, 491}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>107 157 1056 532 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -266,12 +307,13 @@
 								<string>A01FB69A0F07CF63000AAC7B</string>
 								<string>784D0F3214ACE8A600610BDF</string>
 								<string>A01FB6B10F07CF7C000AAC7B</string>
+								<string>784D10C114AF7A6600610BDF</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>4</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -314,7 +356,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>main.cpp</string>
+								<string>Hero.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,20 +364,27 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>main.cpp</string>
+										<string>Hero.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>784D107014AF4F6D00610BDF</string>
+										<string>784D114814AF815A00610BDF</string>
 										<key>history</key>
 										<array>
-											<string>784D106414AF43D800610BDF</string>
-											<string>784D106514AF43D800610BDF</string>
-											<string>784D106614AF43D800610BDF</string>
-											<string>784D106714AF43D800610BDF</string>
-											<string>784D106814AF43D800610BDF</string>
-											<string>784D106E14AF4F6D00610BDF</string>
-											<string>784D106F14AF4F6D00610BDF</string>
+											<string>784D109F14AF5CFA00610BDF</string>
+											<string>784D111B14AF806400610BDF</string>
+											<string>784D112014AF809000610BDF</string>
+											<string>784D112114AF809000610BDF</string>
+											<string>784D112214AF809000610BDF</string>
+											<string>784D112314AF809000610BDF</string>
+											<string>784D112414AF809000610BDF</string>
+											<string>784D112514AF809000610BDF</string>
+											<string>784D112614AF809000610BDF</string>
+											<string>784D112714AF809000610BDF</string>
+											<string>784D112814AF809000610BDF</string>
+											<string>784D112914AF809000610BDF</string>
+											<string>784D112A14AF809000610BDF</string>
+											<string>784D112B14AF809000610BDF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -533,12 +582,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>784D107114AF4F6D00610BDF</string>
+		<string>784D114714AF814800610BDF</string>
 		<string>784D0F6C14AD038000610BDF</string>
 		<string>784D0F6D14AD038000610BDF</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>784D0E4614ABBC5A00610BDF</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>784D10E214AF7BBB00610BDF</string>
 		<string>/Users/Neeko/Documents/Projets/Dev/C++/The-Quest-of-the-Incrementalist/The-Quest-of-the-Incrementalist.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
