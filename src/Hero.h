@@ -9,13 +9,27 @@
 
 #include <SFML/Graphics.hpp>
 
+enum HeroStatus {
+	Idle,
+	WalkingLeft,
+	WalkingRight,
+	Falling
+};
+
 class Hero {
 
 protected:
 	static const int speed; 
 	
 	sf::Sprite sprite;
-	sf::Image image;
+	sf::Image imageIdle;
+	sf::Image imageLeft;
+	sf::Image imageRight;
+	sf::Image imageFall;
+	
+	HeroStatus lastStableStatus;
+	HeroStatus currentStatus;
+	
 	
 public:
 	Hero();
@@ -25,6 +39,9 @@ public:
 	void moveDown(float elapsedTime);
 	void center(int width, int height);
 	void stayInLimits(int width, int height);
+	
+	void setCurrentStatus(HeroStatus newStatus, bool isStable);
+	void restoreLastStableStatus();
 	
 	sf::Sprite& getSprite();
 };

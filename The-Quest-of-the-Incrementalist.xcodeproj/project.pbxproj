@@ -10,6 +10,10 @@
 		784D0E6714ABBE4400610BDF /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D0E6614ABBE4400610BDF /* hero.png */; };
 		784D0F3414ACE8A600610BDF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784D0F3314ACE8A600610BDF /* main.cpp */; };
 		784D0F7114AD060500610BDF /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 784D0F7014AD060500610BDF /* Hero.cpp */; };
+		784D103214AE848900610BDF /* hero_0000_fall.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D102E14AE848900610BDF /* hero_0000_fall.png */; };
+		784D103314AE848900610BDF /* hero_0001_lookright.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D102F14AE848900610BDF /* hero_0001_lookright.png */; };
+		784D103414AE848900610BDF /* hero_0002_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D103014AE848900610BDF /* hero_0002_face.png */; };
+		784D103514AE848900610BDF /* hero_0003_lookleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 784D103114AE848900610BDF /* hero_0003_lookleft.png */; };
 		A0072ADE0F1D0EC500B4A594 /* sfml-system.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CB0F07CFF2000AAC7B /* sfml-system.framework */; };
 		A0072ADF0F1D0EC500B4A594 /* sfml-window.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CC0F07CFF2000AAC7B /* sfml-window.framework */; };
 		A0072AE00F1D0EC500B4A594 /* sfml-graphics.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */; };
@@ -39,6 +43,10 @@
 		784D0F3314ACE8A600610BDF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		784D0F6F14AD060500610BDF /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		784D0F7014AD060500610BDF /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
+		784D102E14AE848900610BDF /* hero_0000_fall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_0000_fall.png; sourceTree = "<group>"; };
+		784D102F14AE848900610BDF /* hero_0001_lookright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_0001_lookright.png; sourceTree = "<group>"; };
+		784D103014AE848900610BDF /* hero_0002_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_0002_face.png; sourceTree = "<group>"; };
+		784D103114AE848900610BDF /* hero_0003_lookleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero_0003_lookleft.png; sourceTree = "<group>"; };
 		A01FB6A90F07CF6E000AAC7B /* The-Quest-of-the-Incrementalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Quest-of-the-Incrementalist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01FB6AC0F07CF6E000AAC7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A01FB6CA0F07CFF2000AAC7B /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "/Library/Frameworks/sfml-graphics.framework"; sourceTree = "<absolute>"; };
@@ -103,6 +111,10 @@
 		A01FB6B10F07CF7C000AAC7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				784D102E14AE848900610BDF /* hero_0000_fall.png */,
+				784D102F14AE848900610BDF /* hero_0001_lookright.png */,
+				784D103014AE848900610BDF /* hero_0002_face.png */,
+				784D103114AE848900610BDF /* hero_0003_lookleft.png */,
 				784D0E6614ABBE4400610BDF /* hero.png */,
 				A01FB6AC0F07CF6E000AAC7B /* Info.plist */,
 			);
@@ -161,6 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				784D0E6714ABBE4400610BDF /* hero.png in Resources */,
+				784D103214AE848900610BDF /* hero_0000_fall.png in Resources */,
+				784D103314AE848900610BDF /* hero_0001_lookright.png in Resources */,
+				784D103414AE848900610BDF /* hero_0002_face.png in Resources */,
+				784D103514AE848900610BDF /* hero_0003_lookleft.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
