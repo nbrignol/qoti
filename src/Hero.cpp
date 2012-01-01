@@ -9,51 +9,60 @@
 
 #include "Hero.h"
 #include <iostream>
+#include <sstream>
 
 const int Hero::speed = 200;
+
+
+sf::Image& Hero::getImage(sf::Image& image, std::string prefix, int number){
+	
+	std::ostringstream oss;
+	oss << prefix << number << ".png";
+	std::string filename = oss.str();
+	
+	image.SetSmooth(false); //to avoid any antialias
+	image.LoadFromFile(oss.str());
+	
+	return image;
+}
+
 
 Hero::Hero(){
 
 	this->setCurrentStatus(Idle, true);
 	
-	this->imageIdle.SetSmooth(false); //to avoid any antialias
-	this->imageIdle.LoadFromFile("hero_idle1.png");
+	for (int i=1; i<5; i++) {
+		sf::Image image;
+		animationIdle.push_back(this->getImage(image, "hero_idle", i));
+	}
+
+	for (int i=1; i<5; i++) {
+		sf::Image image;
+		animationWalkLeft.push_back(this->getImage(image, "hero_walkleft", i));
+	}
 	
-	sf::Image image1;	
-	sf::Image image2;	
-	sf::Image image3;	
-	sf::Image image4;
+	for (int i=1; i<5; i++) {
+		sf::Image image;
+		animationWalkRight.push_back(this->getImage(image, "hero_walkright", i));
+	}
 	
-	image1.SetSmooth(false); //to avoid any antialias
-	image1.LoadFromFile("hero_walkright1.png");
-	image2.SetSmooth(false); //to avoid any antialias
-	image2.LoadFromFile("hero_walkright2.png");
-	image3.SetSmooth(false); //to avoid any antialias
-	image3.LoadFromFile("hero_walkright3.png");
-	image4.SetSmooth(false); //to avoid any antialias
-	image4.LoadFromFile("hero_walkright4.png");
+
+	for (int i=1; i<3; i++) {
+		sf::Image image;
+		animationFall.push_back(this->getImage(image, "hero_fall", i));
+	}
 	
-	images.push_back(image1);
-	images.push_back(image2);
-	images.push_back(image3);
-	images.push_back(image4);
-	currentImage = 0;
+	currentIdleImage = 0;
+	currentWalkLeftImage = 0;
+	currentWalkRightImage = 0;
+	currentFallImage = 0;
 	
-	this->imageLeft.SetSmooth(false); //to avoid any antialias
-	this->imageLeft.LoadFromFile("hero_walkleft1.png");
-	
-	this->imageRight.SetSmooth(false); //to avoid any antialias
-	this->imageRight.LoadFromFile("hero_walkright1.png");
-	
-	this->imageFall.SetSmooth(false); //to avoid any antialias
-	this->imageFall.LoadFromFile("hero_fall1.png");
-	
-	this->sprite.SetImage(imageIdle);
+	//this->sprite.SetImage(imageIdle);
 };
 
 void Hero::center(int width, int height){
-	this->sprite.SetX((width - this->imageIdle.GetWidth()) / 2);
-	this->sprite.SetY((height - this->imageIdle.GetHeight()) / 2);
+	//this->sprite.SetX((width - this->imageIdle.GetWidth()) / 2);
+	//this->sprite.SetY((height - this->imageIdle.GetHeight()) / 2);
 };
 
 void Hero::moveLeft(float elapsedTime){
@@ -69,6 +78,10 @@ void Hero::moveRight(float elapsedTime){
 void Hero::moveDown(float elapsedTime){
 	this->sprite.Move(0, 1 * Hero::speed * elapsedTime);
 	this->setCurrentStatus(Falling, false);
+};
+
+void Hero::wait(){
+	this->setCurrentStatus(Idle, true);
 };
 
 void Hero::stayInLimits(int width, int height){
@@ -108,16 +121,16 @@ sf::Sprite& Hero::getSprite(){
 	
 	switch (currentStatus) {
 		case WalkingLeft:
-			this->sprite.SetImage(imageLeft);
+			this->sprite.SetImage(this->animationWalkLeft.at(currentWalkLeftImage/100));
 			break;
 		case WalkingRight:
-			this->sprite.SetImage(this->images.at(currentImage/100));
+			this->sprite.SetImage(this->animationWalkRight.at(currentWalkRightImage/100));
 			break;
 		case Falling:
-			this->sprite.SetImage(imageFall);
+			this->sprite.SetImage(this->animationFall.at(currentFallImage/1000));
 			break;
 		case Idle:
-			this->sprite.SetImage(imageIdle);
+			this->sprite.SetImage(this->animationIdle.at(currentIdleImage/1000));
 			break;
 		default:
 			break;
@@ -127,7 +140,16 @@ sf::Sprite& Hero::getSprite(){
 };
 
 void Hero::animate(){
-	currentImage++;
-	if (currentImage > 390) currentImage=0;
+	currentWalkRightImage++;
+	if (currentWalkRightImage > 390) currentWalkRightImage=0;
+	
+	currentWalkLeftImage++;
+	if (currentWalkLeftImage > 390) currentWalkLeftImage=0;
+	
+	currentIdleImage++;
+	if (currentIdleImage > 3900) currentIdleImage=0;
+	
+	currentFallImage++;
+	if (currentFallImage > 1900) currentFallImage=0;
 }
 

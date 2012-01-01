@@ -10,7 +10,7 @@ int main()
 {
    
 	// Create main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "The Quest of the Incrementalist 6", sf::Style::Titlebar | sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(800, 600), "The Quest of the Incrementalist 7", sf::Style::Titlebar | sf::Style::Close);
 	sf::Color backgroundColor = sf::Color(50, 50, 50);
 		
 	Hero hero;
@@ -29,11 +29,12 @@ int main()
 		// Move the sprite
 		if (window.GetInput().IsKeyDown(sf::Key::Left)){
 			hero.moveLeft(elapsedTime);
-		}
-		
-		if (window.GetInput().IsKeyDown(sf::Key::Right)){
+		} else if (window.GetInput().IsKeyDown(sf::Key::Right)){
 			hero.moveRight(elapsedTime);
+		} else {
+			hero.wait();
 		}
+
 		
 		hero.moveDown(elapsedTime);
 		hero.stayInLimits(window.GetWidth(), window.GetHeight());
